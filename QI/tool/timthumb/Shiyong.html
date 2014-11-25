@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<h2>TimThumb Parameters</h2>
+<table>
+  <tbody>
+    <tr>
+      <th></th>
+      <th>stands for</th>
+      <th>values</th>
+      <th>What it does</th>
+    </tr>
+    <tr>
+      <td><p>src</p>
+      <p>---</p></td>
+      <td>source</td>
+      <td><p>图像的URL</p>
+      <p>-------------</p></td>
+      <td><p>Tells TimThumb which image to resize › <a href="http://www.binarymoon.co.uk/2010/08/timthumb/">TimThumb basic properties tutorial</a></p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>w</p>
+      <p>---</p></td>
+      <td>width</td>
+      <td><p>显示的宽</p>
+      <p>-------------</p></td>
+      <td><p>Remove the width to scale proportionally (will then need the height) › <a href="http://www.binarymoon.co.uk/2010/08/timthumb/">TimThumb width tutorial</a></p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>h</p>
+      <p>---</p></td>
+      <td>height</td>
+      <td><p>显示的高</p>
+      <p>-------------</p></td>
+      <td><p>Remove the height to scale proportionally (will then need the width) › <a href="http://www.binarymoon.co.uk/2010/08/timthumb/">TimThumb height tutorial</a></p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>q</p>
+      <p>---</p></td>
+      <td>quality</td>
+      <td><p>0 – 100</p>
+      <p>-------------</p></td>
+      <td><p>压缩质量。更高更好的图像数量会看。我不建议继续高于其他约95图像将得到太大 › <a href="http://www.binarymoon.co.uk/2010/08/timthumb/">TimThumb image quality tutorial</a></p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>a</p>
+      <p>---</p></td>
+      <td>alignment</td>
+      <td><p>c, t, l, r, b, tl, tr, bl, br</p>
+      <p>-------------</p></td>
+      <td><ul>
+        <li><strong>c</strong> : position in the center (this is the default)</li>
+        <li><strong>t</strong> : align top</li>
+        <li><strong>tr</strong> : align top right</li>
+        <li><strong>tl</strong> : align top left</li>
+        <li><strong>b</strong> : align bottom</li>
+        <li><strong>br</strong> : align bottom right</li>
+        <li><strong>bl</strong> : align bottom left</li>
+        <li><strong>l</strong> : align left</li>
+        <li><strong>r</strong> : align right</li>
+        </ul>
+        <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>zc</p>
+      <p>---</p></td>
+      <td>zoom / crop</td>
+      <td><p>0, 1, 2, 3</p>
+      <p>-------------</p></td>
+      <td><table>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>调整到适合页面指定尺寸（无裁剪）</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>作物和调整大小，以最适合的尺寸（默认）</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>按比例调整大小，以适应整个图像到指定的尺寸，如果需要添加边框</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>调整比例调整缩放图像的大小，所以有没有国界的差距</td>
+          </tr>
+        </tbody>
+      </table>
+        <p>例子： http://localhost/timthumb.php?src=http://localhost/upload/201309/1378783132443700981.jpg&amp;h=156&amp;w=276&amp;zc=2</p>
+        <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>f</p>
+      <p>---</p></td>
+      <td>filters</td>
+      <td><p>too many to mention</p>
+      <p>-------------</p></td>
+      <td><p>图像过滤器和参数，你可以使用：</p>
+        <ul>
+          <li><strong>1 =非</strong> -反转颜色</li>
+          <li><strong>2 =灰度</strong> -转成深浅不一的灰色形象</li>
+          <li><strong>3 =亮度</strong> -调整图像的亮度。需要1个参数来指定的亮度要添加量。值可以为负值使图像变暗。</li>
+          <li><strong>4 =对比度</strong> -调整图像的对比度。需要1个参数指定适用于少量的造影剂。大于0的值会降低对比度和小于0将增加对比度。</li>
+          <li><strong>5 =着色/色调</strong> -图像应用颜色洗。需要所有的过滤器的大部分参数。参数是RGBA</li>
+          <li><strong>6 =边沿检测</strong> -检测图像边缘</li>
+          <li><strong>7 =浮雕</strong> -浮雕图像（给它一种深度），可以结合上面了colorize滤波器时好看。</li>
+          <li><strong>8 =高斯模糊</strong> -模糊的图像，不幸的是，你可以不指定金额，但你可以申请多次相同的过滤器（如图所示在演示）</li>
+          <li><strong>9 =选择性模糊</strong> -模糊了不同类型的。不知道有什么区别，但比高斯模糊，这种模糊是不太强。</li>
+          <li><strong>10 =平均去除率</strong> -使用平均去除率创建一个“粗略”的效果。</li>
+          <li><strong>11 =平滑</strong> -使图像平滑。</li>
+        </ul>
+        <h3>多一次过滤器</h3>
+        <p>为了使这个超级灵活，我想这将是很好，如果我能链的过滤器一起使用多个过滤器在一个单一的形象。要做到这只是独立的多个过滤器使用管道字符，然后通过一大堆TimThumb。例如，下面的值中，将适用于10亮度的灰度图像：</p>
+        <pre>F = 2 | 1,10
+<br /><br />例子 ：<a href="http://www.binarymoon.co.uk/demo/timthumb-filters/">http://www.binarymoon.co.uk/demo/timthumb-filters/</a>
+
+
+-------------------------------------------------------------------------------------------------------------------</pre>
+      </td>
+    </tr>
+    <tr>
+      <td><p>s</p>
+      <p>---</p></td>
+      <td>sharpen</td>
+      <td>-------------</td>
+      <td><p>锐化过滤器，参数为1</p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>cc</p>
+      <p>---</p></td>
+      <td>canvas colour</td>
+      <td><p>hexadecimal colour value (#ffffff)</p>
+      <p>-------------</p></td>
+      <td><p>更改背景颜色。最常用的改变缩放和裁剪设置，这反过来又可以添加边框的图像时。</p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+    <tr>
+      <td><p>ct</p>
+      <p>---</p></td>
+      <td>canvas transparency</td>
+      <td><p>true (1)</p>
+      <p>-------------</p></td>
+      <td><p>使用的透明度和忽略的背景颜色，参数为1。</p>
+      <p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>使用例子： http://localhost/timthumb.php?src=http://localhost/upload/201309/1378783132443700981.jpg&amp;w=276&amp;h=156&amp;zc=2</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
