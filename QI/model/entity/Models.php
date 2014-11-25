@@ -1,0 +1,12 @@
+<?php
+require_once('model.admin.php');
+require_once('model.conf.php');
+require_once('model.fun_pro.php');
+require_once('model.fun_type.php');
+require_once('model.modual.php');
+require_once('model.news.php');
+require_once('model.news_type.php');
+require_once('model.product.php');
+require_once('model.product_type.php');
+require_once('model.replyposts.php');
+?>

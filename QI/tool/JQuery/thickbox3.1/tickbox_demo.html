@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" content="ThickBox is a webpage UI dialog widget written in javascript on top of the jQuery library. It's function is too show a single image, multiple images, inline content, iframed content, and content served through AJAX in a hybrid modal." />
+<meta name="author" content="Cody Lindley" />
+<meta name="robots" content="all" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<title>ThickBox 3.1调用方法+实例演示---汉化版---by legal</title>
+<style type="text/css" media="all">
+@import "Upimg/global.css";
+@import "Upimg/thickbox.css";
+</style>
+<link rel="alternate stylesheet" type="text/css" href="Upimg/1024.css" title="1024 x 768" />
+<script src="Upimg/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
+<script src="Upimg/thickbox-compressed.js" type="text/javascript"></script>
+<script src="Upimg/global.js" type="text/javascript"></script>
+</head>
+<body id="pageTop">
+<div id="pageContent"><!-- pageContent -->
+<div id="examples"><!-- examples -->
+	<div id="container-2">
+		<ul class="anchors" style="width:100%">
+			<li><a href="#sectionb-1">一张图片</a></li>
+			<li><a href="#sectionb-2">演示</a></li>
+			<li><a href="#sectionb-3">调用代码</a></li>
+		</ul>
+		<div id="sectionb-1" class="anchor">
+			<h5 class="hfivepadding">描述:</h5>
+			<p>
+				这是ThickBox的一个简单实例，这个例子展示了在中放置一张图片（请看演示）。
+			</p>
+			<h5>说明:</h5>
+			<ul>
+				<li>创建一个link元素 (&lt;a href&gt;)</li>
+				<li>给创建的这个link元素一个class属性，其值是：thickbox (class=&quot;thickbox&quot;)</li>
+				<li>在href属性中指定一个张图片地址(.jpg .jpeg .png .gif .bmp)</li>
+			</ul>
+		</div>
+		<div id="sectionb-2" class="anchor">
+		<h5>点击图片查看效果:</h5>
+			<p><a href="Upimg/single.jpg" title="add a caption to title attribute / or leave blank" class="thickbox"><img src="Upimg/single_t.jpg" alt="Image 2"/></a></p>
+		</div>
+		<div id="sectionb-3" class="anchor">
+		<pre class="tabscode" style="height:50px;"><code class="html">&lt;a href=&quot;Upimg/single.jpg&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot;&gt;&lt;img src=&quot;Upimg/single_t.jpg&quot; alt=&quot;Single Image&quot;/&gt;&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+	
+	<div id="container-3">
+		<ul class="anchors" style="width:100%">
+			<li><a href="#sectionc-1">多张图片</a></li>
+			<li><a href="#sectionc-2">演示</a></li>
+			<li><a href="#sectionc-3">调用代码</a></li>
+		</ul>
+		<div id="sectionc-1" class="anchor">
+			<h5 class="hfivepadding">描述:</h5>
+			<p>
+                这个例子和单张图片差不多，但他允许使用rel属性使多张图片成为一组，在ThickBox里导航。这种完美的使用方法适用于图片集。
+			</p>
+			<h5>使用说明:</h5>
+			<ul>
+				<li>创建一个link元素 (&lt;a href&gt;)</li>
+				<li>给创建的这个link元素一个class属性，其值是：thickbox; (class=&quot;thickbox&quot;)</li>
+				<li>在href属性中指定一个张图片地址 (.jpg .jpeg .png .gif .bmp)</li>
+				<li>给每一个link元素一个相同的rel值。（比如：rel=&quot;gallery-plants&quot;）</li>
+			</ul>
+			<h5>重点提醒:</h5>
+			<p>当你打开一个ThickBox图片集的时候, 你能通过键盘的左右箭头键向前和向前和向后导航（在 ThickBox 里也提供了Next和Previous的链接）。 图片将会在图片集中按HTML文档流程从第一张显示到最后一张。</p>
+		</div>
+		<div id="sectionc-2" class="anchor">
+		<h5 class="hfivepadding">点击一张图片:</h5>
+			<p>
+			<a href="Upimg/plant1.jpg" title="add a caption to title attribute / or leave blank" class="thickbox" rel="gallery-plants"><img src="Upimg/plant1_t.jpg" alt="Plant 1" /></a>
+&nbsp;
+<a href="Upimg/plant2.jpg" title="add a caption to title attribute / or leave blank" class="thickbox" rel="gallery-plants"><img src="Upimg/plant2_t.jpg" alt="Plant 2" /></a>
+&nbsp;
+<a href="Upimg/plant3.jpg" title="leave blank, or add caption to title attribute" class="thickbox" rel="gallery-plants"><img src="Upimg/plant3_t.jpg" alt="Plant 3" /></a>
+&nbsp;
+<a href="Upimg/plant4.jpg" title="add a caption to title attribute / or leave blank" class="thickbox" rel="gallery-plants"><img src="Upimg/plant4_t.jpg" alt="Plant 4" /></a>
+			</p>
+		</div>
+		<div id="sectionc-3" class="anchor">
+		<pre class="tabscode" style="height:100px;"><code class="html">&lt;a href=&quot;Upimg/plant1.jpg&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot; rel=&quot;gallery-plants&quot;&gt;&lt;img src=&quot;Upimg/plant1_t.jpg&quot; alt=&quot;Plant 1&quot; /&gt;&lt;/a&gt;&nbsp;
+&lt;a href=&quot;Upimg/plant2.jpg&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot; rel=&quot;gallery-plants&quot;&gt;&lt;img src=&quot;Upimg/plant2_t.jpg&quot; alt=&quot;Plant 2&quot; /&gt;&lt;/a&gt;&nbsp;
+&lt;a href=&quot;Upimg/plant3.jpg&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot; rel=&quot;gallery-plants&quot;&gt;&lt;img src=&quot;Upimg/plant3_t.jpg&quot; alt=&quot;Plant 3&quot; /&gt;&lt;/a&gt;&nbsp;
+&lt;a href=&quot;Upimg/plant4.jpg&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot; rel=&quot;gallery-plants&quot;&gt;&lt;img src=&quot;Upimg/plant4_t.jpg&quot; alt=&quot;Plant 4&quot; /&gt;&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+	
+	<div id="container-4">
+		<ul class="anchors" style="width:100%">
+			<li><a href="#sectiond-1">内嵌内容</a></li>
+			<li><a href="#sectiond-2">演示</a></li>
+			<li><a href="#sectiond-3">调用代码</a></li>
+		</ul>
+		<div id="sectiond-1" class="anchor">
+			<h5 class="hfivepadding">描述:</h5>
+			<p>
+				页面中的内嵌内容，隐藏的或是显示的均可以放置在ThickBox中。
+			</p>
+			<h5>使用说明:</h5>
+			<ul>
+				<li>创建一个link元素(&lt;a href&gt;)</li>
+				<li>给创建的这个link元素一个class属性，其值是：thickbox (class=&quot;thickbox&quot;)</li>
+				<li>给link元素的href属性设置为: #TB_inline</li>
+				<li>在href属性的值#TB_inlineIn后面追加一下字符: <pre class="exampleCode"><code class="html">?height=300&amp;width=300&amp;inlineId=myOnPageContent</code></pre></li>
+				<li>根据你的实际需要更改height, width, 和 inlineId的值（这里的inlineID就是包含你想显示在ThickBox上的内容的容器的id）。</li>
+				<li>当然你也可以在参数字符串中加 modal=true(比如. #TB_inline?height=155&amp;width=300&amp;inlineId=hiddenModalContent&amp;modal=true) 这样当关闭ThickBox时会调用ThickBox内部的一个tb_remove()函数。在演示中查看“显示隐藏模式的内容”则要求点击yes 或 no才能关闭ThickBox。</li>
+			</ul>
+			<h5>重点提醒:</h5>
+			<p>如果内嵌在ThickBox的内容多于ThickBox显示的尺寸，一个滚动条会出现。请确认ThickBox的尺寸和内容的匹配避免出现滚动条而显示全部内嵌内容。也就是说，如果不想要滚动条，你可以增加ThickBox的宽和高直到内嵌的内容不需要滚动条就能全部显示。</p>
+		</div>
+		<div id="sectiond-2" class="anchor">
+			<p style="padding-top:10px"><input alt="#TB_inline?height=150&amp;width=400&amp;inlineId=myOnPageContent" title="add a caption to title attribute / or leave blank" class="thickbox" type="button" value="显示" /> 点击“显示”按钮后，将在中看到下面的一段文字以及那个写了”测试“的input，或是点击<a href="#TB_inline?height=155&amp;width=300&amp;inlineId=hiddenModalContent&amp;modal=true" class="thickbox">显示隐藏模式的内容</a>&nbsp;则显示在本文档中隐藏起来id为“hiddenModalContent”的div内的内容</p>
+			<div id="myOnPageContent"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+			<p><select name=""><option>测试</option></select></p>
+			</div>
+            <div id="hiddenModalContent" style="display:none">
+<p>这是隐藏起来的文本，现在你看到了。Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p style="text-align:center"><input type="submit" id="Login" value="&nbsp;&nbsp;Ok&nbsp;&nbsp;" onclick="tb_remove()" /></p>
+</div>
+		</div>
+		<div id="sectiond-3" class="anchor">
+		<pre class="tabscode" style="height:50px;"><code class="html">&lt;input alt="#TB_inline?height=300&amp;width=400&amp;inlineId=myOnPageContent" title="add a caption to title attribute / or leave blank" class="thickbox" type="button" value="Show" /&gt;&nbsp;&nbsp;
+&lt;a href="#TB_inline?height=155&amp;width=300&amp;inlineId=hiddenModalContent&amp;modal=true" class="thickbox"&gt;Show hidden modal content.&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+	
+	<div id="container-5">
+		<ul class="anchors" style="width:100%">
+			<li><a href="#sectione-1">iFramed 内容</a></li>
+			<li><a href="#sectione-2">演示</a></li>
+			<li><a href="#sectione-3">调用代码</a></li>
+		</ul>
+		<div id="sectione-1" class="anchor">
+			<h5 class="hfivepadding">描述:</h5>
+			<p>
+			在ThickBox中打开被 iFramed URL.哈, 这正 <a href="http://amix.dk/greybox/demo.html">Greybox</a>的功能.
+
+Opens URL's in an iframe inside of ThickBox. Yes, this is <a href="http://amix.dk/greybox/demo.html">Greybox</a> functionality.</p>
+			<h5>使用说明:</h5>
+			<ul>
+				<li>创建一个link元素 (&lt;a href&gt;)</li>
+				<li>给创建的这个link元素一个class属性，其值是：thickbox (class=&quot;thickbox&quot;)</li>
+				<li>给link元素的href属性指向一个你希望在ThickBox显示的URL。</li>
+				<li>href属性的URL后面追加上以下字符参数： <pre class="exampleCode"><code class="html">?KeepThis=true&amp;TB_iframe=true&amp;height=400&amp;width=600</code></pre></li>
+				<li>根据你的实际需要改变上面的参数字符。</li>
+				<li>当然你也可以在参数字符串中加 modal=true<br/>(比如：?KeepThis=true&amp;TB_iframe=true&amp;height=400&amp;width=600&amp;modal=true)  这样当关闭ThickBox时会调用ThickBox iframe (self.parent.tb_remove())内部的一个tb_remove()函数。在演示中查看“打开iFrame Modal的演示”则要求点击ok才能关闭ThickBox。</li>
+			</ul>
+			<h5>重点提醒:</h5>
+			<p>所有其他参数字符都必须在TB_iframe 参数之前。URL中所有"TB" 之后的将被移除。</p>
+		</div>
+		<div id="sectione-2" class="anchor">
+			<p><a href="Upimg/ajax_ifram.html?keepThis=true&amp;TB_iframe=true&amp;height=250&amp;width=400" title="add a caption to title attribute / or leave blank" class="thickbox">例子1</a>&nbsp;&nbsp;<a href="Upimg/ajaxOverFlow.html?keepThis=true&amp;TB_iframe=true&amp;height=300&amp;width=500" title="add a caption to title attribute / or leave blank" class="thickbox">例子2</a>&nbsp;&nbsp;<a href="Upimg/iframeModal.html?placeValuesBeforeTB_=savedValues&amp;TB_iframe=true&amp;height=200&amp;width=300&amp;modal=true" title="add a caption to title attribute / or leave blank" class="thickbox">iFrame Modal被打开的演示</a></p>
+					
+		</div>
+		<div id="sectione-3" class="anchor">
+		<pre class="tabscode" style="height:70px;"><code class="html">&lt;a href=&quot;Upimg/ajax_ifram.html?keepThis=true&amp;TB_iframe=true&amp;height=250&amp;width=400&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot;&gt;例子1&lt;/a&gt;&nbsp;&nbsp;
+&lt;a href=&quot;Upimg/ajaxOverFlow.html?keepThis=true&amp;TB_iframe=true&amp;height=300&amp;width=500&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot;&gt;例子2&lt;/a&gt;
+&lt;a href="iframeModal.html?placeValuesBeforeTB_=savedValues&amp;TB_iframe=true&amp;height=200&amp;width=300&amp;modal=true" title="add a caption to title attribute / or leave blank" class="thickbox"&gt;iFrame Modal被打开的演示&lt;/a&gt;
+</code></pre>
+		</div>
+	</div>
+
+	<div id="container-6">
+		<ul class="anchors" style="width:100%">
+			<li><a href="#sectionf-1">AJAX内容</a></li>
+			<li><a href="#sectionf-2">演示</a></li>
+			<li><a href="#sectionf-3">调用代码</a></li>
+		</ul>
+		<div id="sectionf-1" class="anchor">
+			<h5 class="hfivepadding">描述:</h5>
+			<p>
+				采用一个隐藏的HTTP request (AJAX) 从同一个服务器上获取文件，并使用显示其内容。
+		  </p>
+			<h5>使用说明:</h5>
+			<ul>
+				<li>创建一个link元素 (&lt;a href&gt;)</li>
+				<li>给创建的这个link元素一个class属性，其值是：thickbox (class=&quot;thickbox&quot;)</li>
+				<li>给link元素的href属性指向一个链接文件或是服务器目录。(href=&quot;ajaxLogin.htm&quot;) </li>
+				<li>在href属性的URL后面追加以下字符来结束URL: <pre class="exampleCode"><code class="html">?height=300&amp;width=300</code></pre></li>
+				<li>根据需要更改宽和高的值。</li>
+				<li>当然，你也可以在上面的参数字符串再加上modal=true(比如. ?height=300&amp;width=300&amp;modal=true) 这样当关闭ThickBox时会调用ThickBox内部的一个tb_remove()函数。在演示中查看“login”这个例子则要求点击yes 或 no才能关闭ThickBox。</li>
+			</ul>
+		<h5>重点提醒:</h5>
+			<p>为了在新打开的Ajax ThickBox中打开新的Ajax内容，他的代码必须包含适当的 HTML (class=""thickbox) 来加载一个Ajax ThickBox (请留意演示例子)。其他唯一需要注意的一个地方就是调用的ThickBox必须包含宽和高，如果你给这两项留空，则窗口会自适应到默认大小（630*440）.</p>
+		</div>
+		<div id="sectionf-2" class="anchor">
+			<p><a href="Upimg/ajaxOverFlow.html?height=300&amp;width=400" title="add a caption to title attribute / or leave blank" class="thickbox">有滚动条的内容</a>&nbsp;&nbsp;
+<a href="Upimg/ajax.html?height=220&amp;width=400" class="thickbox" title="add a caption to title attribute / or leave blank">没滚动条的内容</a>&nbsp;&nbsp;
+<a href="Upimg/ajaxLogin.html?height=85&amp;width=250&amp;modal=true" class="thickbox" title="Please Sign In">登入(模式)</a>
+&nbsp;&nbsp;
+<a href="Upimg/ajaxTBcontent.html?height=200&amp;width=300" class="thickbox" title="">更新ThickBox内容</a></p>
+		</div>
+		<div id="sectionf-3" class="anchor">
+		<pre class="tabscode" style="height:100px;"><code class="html">&lt;a href=&quot;Upimg/ajaxOverFlow.html?height=300&amp;width=300&quot; title=&quot;add a caption to title attribute / or leave blank&quot; class=&quot;thickbox&quot;&gt;有滚动条的内容&lt;/a&gt;&nbsp;&nbsp;
+&lt;a href=&quot;Upimg/ajax.html?height=220&amp;width=400&quot; class=&quot;thickbox&quot; title=&quot;add a caption to title attribute / or leave blank&quot;&gt;没滚动条的内容&lt;/a&gt;&nbsp;&nbsp;
+&lt;a href="Upimg/ajaxLogin.html?height=85&amp;width=250&amp;modal=true" class="thickbox" title="Please Sign In"&gt;登入(模式)&lt;/a&gt;&nbsp;&nbsp;
+&lt;a href="Upimg/ajaxTBcontent.html?height=200&amp;width=300" class="thickbox" title=""&gt;更新ThickBox内容&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+
+	<div style="clear:both">点击<a href="http://jquery.com/demo/thickbox/" class="BTT">这里</a>查看原版英文,由<a href="http://www.ilegal.cn" class="BTT">legal</a>翻译,翻得不好多多原谅.<br/>
+    主要目的除了方便自己使用,也可以和大家分享下.关键是访问国外网站N慢.这样后大家看着也舒服.<a href="http://www.ilegal.cn" class="BTT">访问我的博客</a><br/>
+    本文版权归Cody Lindley 所有<br/> 
+    PS:thickbox是由 Cody Lindley开发的一个jQuery插件。本thickbox3.1实例 updated on 08/08/2007
+</div>
+</div><!-- /examples -->
+
+
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-162561-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
