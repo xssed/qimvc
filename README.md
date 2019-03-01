@@ -1,5 +1,5 @@
 
-qimvc 一款简单的php框架
+qimvc 一款简单的MVC php框架
 ==============
 
 In 2013, a simple mvc  working mode(PHP) 
